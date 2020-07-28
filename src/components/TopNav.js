@@ -7,7 +7,7 @@ export default class TopNav extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.auth;
+    this.auth = 1;
     this.goToProfile = this.goToProfile.bind(this);
     this.logout = this.logout.bind(this);
   }

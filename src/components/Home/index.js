@@ -6,8 +6,8 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.auth;
-    this.data;
+    this.auth = 1;
+    this.data = 1;
   }
 
   componentWillMount() {
