@@ -3,6 +3,8 @@ import axios from "axios";
 import Card from "@material-ui/core/Card";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
+import { Link } from "react-router-dom";
+import config from "../../config";
 
 export default class BooksFilter extends React.Component {
   constructor(props) {
@@ -56,10 +58,12 @@ export default class BooksFilter extends React.Component {
         {this.state.books.map((val, key) => {
           return (
             <Card variant="outlined">
-              <h1>{val.name}</h1>
+              <Link to={`/book/${val.id}`}>
+                <h1>{val.name}</h1>
+              </Link>
               <p>{val.about}</p>
               <em>
-                genre: {val.genre}
+                genre: {config.genre[val.genre]}
                 <br />
               </em>
               <em>
